@@ -1,7 +1,7 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
 
-export interface Vegetable {
+export interface Poste {
   name: string;
 }
 
@@ -14,15 +14,15 @@ export interface Vegetable {
   styleUrls: ['chips-drag-drop-example.css'],
 })
 export class ChipsDragDropExample {
-  vegetables: Vegetable[] = [
+  postes: Poste[] = [
     { name: 'poste 1' },
     { name: 'poste 2' },
     { name: 'poste 3' },
     { name: 'poste 4' },
   ];
 
-  drop(event: CdkDragDrop<Vegetable[]>) {
-    moveItemInArray(this.vegetables, event.previousIndex, event.currentIndex);
+  drop(event: CdkDragDrop<Poste[]>) {
+    moveItemInArray(this.postes, event.previousIndex, event.currentIndex);
   }
 }
 
