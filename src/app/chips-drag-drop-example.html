@@ -1,0 +1,33 @@
+<mat-chip-list
+  class="example-chip"
+  cdkDropList 
+  cdkDropListOrientation="horizontal"
+  (cdkDropListDropped)="drop($event)">
+  
+<ng-container *ngFor="let vegetable of vegetables;let i = index"  >
+
+  <mat-chip
+    class="example-box"
+    cdkDrag
+    *ngIf="i===0"
+    selected
+    >
+    {{vegetable.name}}
+  </mat-chip>
+  <mat-chip
+    class="example-box"
+    cdkDrag
+    *ngIf="!(i===0)"
+    >
+    {{vegetable.name}}
+  </mat-chip>
+</ng-container>
+
+</mat-chip-list>
+
+
+
+
+<!-- Copyright 2020 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
